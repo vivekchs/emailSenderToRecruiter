@@ -1,0 +1,30 @@
+{
+  "name": "job_apply_email",
+  "version": "1.0.0",
+  "description": "basically i want to make an api such that it can take email from json and send the email for that particular comapny with less effort",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "prettier --write . && nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write ."
+  },
+  "author": "vivek yadav",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/formbody": "^8.0.2",
+    "@fastify/multipart": "^9.0.3",
+    "config": "^4.1.0",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^17.2.1",
+    "fastify": "^5.4.0",
+    "googleapis": "^154.1.0",
+    "mongoose": "^8.17.0",
+    "nodemailer": "^7.0.5",
+    "nodemon": "^3.1.10",
+    "pino": "^9.7.0",
+    "pino-pretty": "^13.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}

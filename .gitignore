@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Environment variables and credentials
+.env
+
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+package-lock.json
+google-service-account.json

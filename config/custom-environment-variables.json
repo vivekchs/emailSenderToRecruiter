@@ -1,0 +1,7 @@
+{
+  "sender_email": "SENDER_EMAIL",
+  "sender_app_password": "SENDER_APP_PASSWORD",
+  "resume_file_path": "RESUME_FILE_PATH",
+  "emailIntervalMinutes": "EMAIL_INTERVAL_IN_MINUTES",
+  "fileResumeName": "VIVEK_YADAV_RESUME.pdf"
+}
