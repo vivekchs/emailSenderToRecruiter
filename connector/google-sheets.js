@@ -1,5 +1,5 @@
 const { google } = require('googleapis');
-const path = require('path'); 
+const path = require('path');
 const logger = require('../utils/logger');
 
 const auth = new google.auth.GoogleAuth({
@@ -53,11 +53,11 @@ async function getSheetData(sheetLinkOrId, companyName) {
     });
 
     // ✅ Filter by company name (case insensitive)
-    console.log()
     const filteredData = companyName
-      ? data.filter(entry => entry.company?.toLowerCase() === companyName.toLowerCase())
-      : data;
-    console.log("filteredData",filteredData)
+  ? data.filter(entry => entry.company?.toLowerCase().trim() === companyName.toLowerCase().trim())
+  : data;
+
+    console.log('filteredData', filteredData);
     return filteredData;
   } catch (error) {
     logger.error({ err: error }, 'Failed to read sheet data');
