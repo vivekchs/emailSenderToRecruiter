@@ -34,9 +34,9 @@ const emailSenderModule = async jsonData => {
       if (!person.name || !person.email || !person.company) continue;
 
       const personalized = emailBodyTemplate
-  .replace(/{name}/g, firstWordToCamelCase(person.name))
-  .replace(/{company}/g, fullCamelCase(person.company))
-  .replace(/{jobId}/g, jobId);
+        .replace(/{name}/g, firstWordToCamelCase(person.name))
+        .replace(/{company}/g, fullCamelCase(person.company))
+        .replace(/{jobId}/g, jobId);
 
       logger.info(`personalized email is:\n${personalized}`);
       logger.info(`from: ${senderEmail} → to: ${person.email.trim()}`);
@@ -96,6 +96,5 @@ function fullCamelCase(str) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(' ');
 }
-
 
 module.exports = { emailSenderModule };

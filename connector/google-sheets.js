@@ -54,8 +54,10 @@ async function getSheetData(sheetLinkOrId, companyName) {
 
     // ✅ Filter by company name (case insensitive)
     const filteredData = companyName
-  ? data.filter(entry => entry.company?.toLowerCase().trim() === companyName.toLowerCase().trim())
-  : data;
+      ? data.filter(
+          entry => entry.company?.toLowerCase().trim() === companyName.toLowerCase().trim()
+        )
+      : data;
 
     console.log('filteredData', filteredData);
     return filteredData;
